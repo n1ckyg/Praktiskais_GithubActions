@@ -16,54 +16,54 @@ jobs:
     runs-on: self-hosted
     needs: [install-pip-deps]
     steps:
-      - name: test
-        run: echo "Deploying to dev"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
 
   tests-on-dev:
     runs-on: self-hosted
     needs: [deploy-to-dev]
     steps:
-      - name: test
-        run: echo "Testing on dev"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/test
 
   deploy-to-staging:
     runs-on: self-hosted
     needs: [tests-on-dev]
     steps:
-      - name: test
-        run: echo "Deploying to staging"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
 
   tests-on-staging:
     runs-on: self-hosted
     needs: [deploy-to-staging]
     steps:
-      - name: test
-        run: echo "Testing on staging"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/test
 
   deploy-to-preprod:
     runs-on: self-hosted
     needs: [tests-on-staging]
     steps:
-      - name: test
-        run: echo "Deploying to preprod"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
 
   tests-on-preprod:
     runs-on: self-hosted
     needs: [deploy-to-preprod]
     steps:
-      - name: test
-        run: echo "Testing on preprod"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/test
 
   deploy-to-prod:
     runs-on: self-hosted
     needs: [tests-on-preprod]
     steps:
-      - name: test
-        run: echo "Deploying to prod"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
 
   tests-on-prod:
     runs-on: self-hosted
     needs: [deploy-to-prod]
     steps:
-      - name: test
-        run: echo "Testing on prod"
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/test
