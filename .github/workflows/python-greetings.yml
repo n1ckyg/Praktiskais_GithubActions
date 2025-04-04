@@ -1,0 +1,7 @@
+name: Praktiskais Darbs Github Actions
+
+on:
+  push:
+    branches["main"]
+  workflow_dispatch:
+
