@@ -8,19 +8,29 @@ runs:
       with:
         repository: 'n1ckyg/python-greetings'
         path: ./python greetings/
+
     - name: Print step name
       run: echo "Acessing repository"
       shell: cmd
+      working-directory: ./python greetings 
+
     - name: Print step name
       run: echo "Checking folder"
       shell: cmd
+      working-directory: ./python greetings
+
     - name: Print step name
       run: echo "dir"
       shell: cmd
+      working-directory: ./python greetings
+
     - name: Print step name
       run: echo "Installing Python"
       shell: cmd
+      working-directory: ./python greetings
+
     - name: Print step name
       run: echo "pip install -r requirements.txt"
       shell: cmd
+      working-directory: ./python greetings
     

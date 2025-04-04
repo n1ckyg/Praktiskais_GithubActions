@@ -1,8 +1,53 @@
-description: "Deploy code"
+name: "Deploy"
+description: "Deploy Code"
+inputs:
+  environment:
+    description: 'enviroment for testing'
+    required: true
+  port:
+    description: 'port to deploy'
+    required: true
 
 runs:
   using: composite
   steps:
+    - uses: actions/checkout@v4
+      with:
+        repository: 'n1ckyg/python-greetings'
+        path: ./python greetings/
+
     - name: Print step name
-      run: echo "Haha it works"
+      run: echo "Acessing repository"
       shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "Checking folder"
+      shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "dir"
+      shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "Deleting Existing Processes"
+      shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "node_modules\\.bin\\pm2 delete greetings-app-${{inputs.environment}} & EXIT /B 0"
+      shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "Run pm2 process.."
+      shell: cmd
+      working-directory: ./python greetings
+
+    - name: Print step name
+      run: echo "node_modules\\.bin\\pm2 start app.py --name greetings-app-${{inputs.environment}} -- --port ${{inputs.port}}"
+      shell: cmd
+      working-directory: ./python greetings
+
