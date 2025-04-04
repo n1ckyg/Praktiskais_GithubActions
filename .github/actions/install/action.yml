@@ -20,7 +20,7 @@ runs:
       working-directory: ./python greetings
 
     - name: Print step name
-      run: echo "dir"
+      run: dir
       shell: cmd
       working-directory: ./python greetings
 
@@ -30,7 +30,7 @@ runs:
       working-directory: ./python greetings
 
     - name: Print step name
-      run: echo "pip install -r requirements.txt"
+      run: pip install -r requirements.txt
       shell: cmd
       working-directory: ./python greetings
     
