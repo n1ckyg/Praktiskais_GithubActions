@@ -1,8 +1,38 @@
-description: "Test code"
+name: "Test"
+description: "Test Code"
+inputs:
+  environment:
+    description: 'environment for testing'
+    required: true
+  test-suite:
+    description: 'port to deploy'
+    required: false
+    default: 'greetings'
 
 runs:
   using: composite
   steps:
+    - uses: actions/checkout@v4
+      with:
+        repository: 'n1ckyg/course-js-api-framework'
+        path: ./course-js-api-framework/
+
     - name: Print step name
-      run: echo "Hahaa it works"
+      run: echo "Acessing repository"
       shell: cmd
+      working-directory: ./course-js-api-framework
+
+    - name: Check folders contents
+      run: dir
+      shell: cmd
+      working-directory: ./course-js-api-framework
+
+    - name: Installing npm
+      run: npm install
+      shell: cmd
+      working-directory: ./course-js-api-framework
+
+    - name: Run test
+      run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}_${{inputs.environment}}
+      shell: cmd
+      working-directory: ./course-js-api-framework
