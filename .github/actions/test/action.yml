@@ -4,5 +4,5 @@ runs:
   using: composite
   steps:
     - name: Print step name
-      run: echo "Haha it works"
+      run: echo "Hahaa it works"
       shell: cmd
