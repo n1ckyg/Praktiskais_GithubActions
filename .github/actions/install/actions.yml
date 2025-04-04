@@ -1,0 +1,9 @@
+name: "Install"
+description: "Install dependencies"
+
+runs:
+  using: composite
+  steps:
+    - name: Print step name
+      run: echo "Haha it works"
+      shell: bash
