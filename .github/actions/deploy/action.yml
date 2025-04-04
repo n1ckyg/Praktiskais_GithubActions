@@ -37,7 +37,7 @@ runs:
       working-directory: ./python greetings
 
     - name: Print step name
-      run: node_modules\\.bin\\pm2 delete greetings-app-${{inputs.environment}} & EXIT /B 0
+      run: pm2 delete greetings-app-${{inputs.environment}} & EXIT /B 0
       shell: cmd
       working-directory: ./python greetings
 
@@ -47,7 +47,7 @@ runs:
       working-directory: ./python greetings
 
     - name: Print step name
-      run: node_modules\\.bin\\pm2 start app.py --name greetings-app-${{inputs.environment}} -- --port ${{inputs.port}}
+      run: pm2 start app.py --name greetings-app-${{inputs.environment}} -- --port ${{inputs.port}}
       shell: cmd
       working-directory: ./python greetings
 

@@ -18,9 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
-  #      with:
-  #        environment: 'dev'
-  #        port: '7001'
+        with:
+          environment: 'dev'
+          port: '7001'
 
   tests-on-dev:
     runs-on: self-hosted
@@ -28,9 +28,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/test
-  #      with:
-  #        environment: 'dev'
-  #        test-suite: 'greetings'
+        with:
+          environment: 'dev'
+          test-suite: 'greetings'
 
   deploy-to-staging:
     runs-on: self-hosted
@@ -38,9 +38,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
-  #      with:
-  #        environment: 'staging'
-  #        port: '7002'
+        with:
+          environment: 'staging'
+          port: '7002'
 
   tests-on-staging:
     runs-on: self-hosted
@@ -48,9 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/test
-  #      with:
-  #        environment: 'staging'
-  #        test-suite: 'greetings'
+        with:
+          environment: 'staging'
+          test-suite: 'greetings'
 
   deploy-to-preprod:
     runs-on: self-hosted
@@ -58,9 +58,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
-  #      with:
-  #        environment: 'preprod'
-  #        port: '7003'
+        with:
+          environment: 'preprod'
+          port: '7003'
 
   tests-on-preprod:
     runs-on: self-hosted
@@ -68,9 +68,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/test
-  #      with:
-  #        environment: 'preprod'
-  #        test-suite: 'greetings'
+        with:
+          environment: 'preprod'
+          test-suite: 'greetings'
 
   deploy-to-prod:
     runs-on: self-hosted
@@ -78,9 +78,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
-   #      with:
-  #        environment: 'prod'
-  #        port: '7004'
+        with:
+          environment: 'prod'
+          port: '7004'
 
   tests-on-prod:
     runs-on: self-hosted
@@ -88,7 +88,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/test
-  #      with:
-  #        environment: 'prod'
-  #        test-suite: 'greetings'
+        with:
+          environment: 'prod'
+          test-suite: 'greetings'
       
