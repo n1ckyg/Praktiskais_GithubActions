@@ -6,4 +6,4 @@ runs:
   steps:
     - name: Print step name
       run: echo "Haha it works"
-      shell: bash
+      shell: cmd
