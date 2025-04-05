@@ -17,11 +17,6 @@ jobs:
     needs: [install-pip-deps]
     steps:
       - uses: actions/checkout@v4
-        with:
-          repository: 'n1ckyg/python-greetings'
-          path: ./deploy/
-          
-      - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
         with:
           environment: 'dev'

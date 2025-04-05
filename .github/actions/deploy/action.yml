@@ -16,7 +16,11 @@ runs:
     - name: Print step name
       run: echo "Acessing repository"
       shell: cmd
-      working-directory: ./deploy
+
+    - uses: actions/checkout@v4
+      with:
+        repository: 'mtararujs/python-greetings'
+        path: ./deploy/
 
     - name: Print step name
       run: echo "${{inputs.environment}}, ${{inputs.port}}"

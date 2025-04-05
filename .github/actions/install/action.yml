@@ -6,30 +6,31 @@ runs:
   steps:
     - uses: actions/checkout@v4
       with:
-        repository: 'n1ckyg/python-greetings'
-        path: ./install/
+        repository: 'mtararujs/python-greetings'
+        path: ./python-greetings/
 
     - name: Print step name
       run: echo "Acessing repository"
       shell: cmd
       working-directory: ./install
+      
     - name: Print step name
       run: echo "Checking folder"
       shell: cmd
-      working-directory: ./install
+      working-directory: ./python-greetings
 
     - name: Print step name
       run: dir
       shell: cmd
-      working-directory: ./install
+      working-directory: ./python-greetings
 
     - name: Print step name
       run: echo "Installing Python"
       shell: cmd
-      working-directory: ./install
+      working-directory: ./python-greetings
 
     - name: Print step name
       run: pip install -r requirements.txt
       shell: cmd
-      working-directory: ./install
+      working-directory: ./python-greetings
     
