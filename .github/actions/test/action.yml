@@ -43,6 +43,10 @@ runs:
 #      with:
 #        repository: 'n1ckyg/course-js-api-framework'
 #        path: ./test/
+    - name: Print step name
+      run: pm2 list
+      shell: cmd
+      #working-directory: ./deploy
 #
     - name: Print step name
       run: echo "Testing in progress"
