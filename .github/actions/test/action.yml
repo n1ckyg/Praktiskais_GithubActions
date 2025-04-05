@@ -15,24 +15,24 @@ runs:
     - uses: actions/checkout@v4
       with:
         repository: 'n1ckyg/course-js-api-framework'
-        path: ./course-js-api-framework/
+        path: ./test/
 
     - name: Print step name
       run: echo "Acessing repository"
       shell: cmd
-      working-directory: ./course-js-api-framework
+      working-directory: ./test
 
     - name: Check folders contents
       run: dir
       shell: cmd
-      working-directory: ./course-js-api-framework
+      working-directory: ./test
 
     - name: Installing npm
       run: npm install
       shell: cmd
-      working-directory: ./course-js-api-framework
+      working-directory: ./test
 
     - name: Run test
       run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}_${{inputs.environment}}
       shell: cmd
-      working-directory: ./course-js-api-framework
+      working-directory: ./test
