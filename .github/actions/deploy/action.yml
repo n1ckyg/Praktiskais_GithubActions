@@ -20,40 +20,40 @@ runs:
     - uses: actions/checkout@v4
       with:
         repository: 'mtararujs/python-greetings'
-        path: ./deploy/
+        path: ./python-greetings/
 
     - name: Print step name
       run: echo "${{inputs.environment}}, ${{inputs.port}}"
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: echo "Checking folder"
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: dir
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: echo "Deleting Existing Processes"
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: pm2 delete greetings-app-${{inputs.environment}} & EXIT /B 0
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: echo "Run pm2 process.."
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
     - name: Print step name
       run: pm2 start app.py --name greetings-app-${{inputs.environment}} -- --port ${{inputs.port}}
       shell: cmd
-      working-directory: ./deploy
+      working-directory: ./python-greetings/
 
