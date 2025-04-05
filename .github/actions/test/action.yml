@@ -1,38 +1,50 @@
 name: "Test"
 description: "Test Code"
-inputs:
-  environment:
-    description: 'Environment for testing'
-    required: true
-  test-suite:
-    description: 'Port to deploy'
-    required: false
-    default: 'greetings'
+#inputs:
+#  environment:
+#    description: 'Environment for testing'
+#    required: true
+#  test-suite:
+#    description: 'Port to deploy'
+#    required: false
+#    default: 'greetings'
 
+#runs:
+#  using: composite
+#  steps:
+#    - uses: actions/checkout@v4
+#      with:
+#        repository: 'n1ckyg/course-js-api-framework'
+#        path: ./test/
+#
+#    - name: Print step name
+#      run: echo "Acessing repository"
+#      shell: cmd
+#      working-directory: ./test
+#
+ #   - name: Check folders contents
+  #    run: dir
+   #   shell: cmd
+    #  working-directory: ./test
+
+    - name: Installing npm
+#      run: npm install
+ #     shell: cmd
+  #    working-directory: ./test
+#
+ #   - name: Run test
+  #    run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}_${{inputs.environment}}
+   #   shell: cmd
+    #  working-directory: ./test
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: 'n1ckyg/course-js-api-framework'
-        path: ./test/
-
+#    - uses: actions/checkout@v4
+#      with:
+#        repository: 'n1ckyg/course-js-api-framework'
+#        path: ./test/
+#
     - name: Print step name
-      run: echo "Acessing repository"
+      run: echo "Testing in progress"
       shell: cmd
-      working-directory: ./test
-
-    - name: Check folders contents
-      run: dir
-      shell: cmd
-      working-directory: ./test
-
-    - name: Installing npm
-      run: npm install
-      shell: cmd
-      working-directory: ./test
-
-    - name: Run test
-      run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}_${{inputs.environment}}
-      shell: cmd
-      working-directory: ./test
+#      working-directory: ./test    
