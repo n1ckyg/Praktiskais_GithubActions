@@ -2,10 +2,10 @@ name: "Test"
 description: "Test Code"
 inputs:
   environment:
-    description: 'environment for testing'
+    description: 'Environment for testing'
     required: true
   test-suite:
-    description: 'port to deploy'
+    description: 'Port to deploy'
     required: false
     default: 'greetings'
 
