@@ -11,10 +11,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: 'n1ckyg/python-greetings'
-        path: ./deploy/
+
 
     - name: Print step name
       run: echo "Acessing repository"

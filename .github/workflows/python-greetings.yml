@@ -21,6 +21,11 @@ jobs:
         with:
           environment: 'dev'
           port: '7001'
+          
+      - uses: actions/checkout@v4
+        with:
+        repository: 'n1ckyg/python-greetings'
+        path: ./deploy/
 
   tests-on-dev:
     runs-on: self-hosted
