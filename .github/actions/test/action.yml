@@ -27,6 +27,11 @@ runs:
       shell: cmd
       working-directory: ./course-js-api-framework 
 
+    - name: Check pm2
+      run: pm2 list
+      shell: cmd
+      working-directory: ./course-js-api-framework 
+
     - name: Installing npm
       run: npm install
       shell: cmd
