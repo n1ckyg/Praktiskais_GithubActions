@@ -38,7 +38,7 @@ runs:
       working-directory: ./course-js-api-framework 
 
     - name: Run test
-      run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}-app-${{inputs.environment}} & EXIT /B 0
+      run: npm run ${{inputs.test-suite}} ${{inputs.test-suite}}-app-${{inputs.environment}}
       shell: cmd
       working-directory: ./course-js-api-framework 
 
