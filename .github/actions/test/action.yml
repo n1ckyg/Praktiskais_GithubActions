@@ -27,7 +27,7 @@ description: "Test Code"
    #   shell: cmd
     #  working-directory: ./test
 
-    - name: Installing npm
+#    - name: Installing npm
 #      run: npm install
  #     shell: cmd
   #    working-directory: ./test
