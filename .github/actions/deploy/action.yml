@@ -53,7 +53,7 @@ runs:
       working-directory: ./python-greetings/
 
     - name: Print step name
-      run: pm2 start app.py --name greetings-app-${{inputs.environment}} -- --port ${{inputs.port}}
+      run: pm2 start app.py --name greetings-app-${{inputs.environment}} --watch -- --port ${{inputs.port}}
       shell: cmd
       working-directory: ./python-greetings/
 
