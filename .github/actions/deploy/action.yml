@@ -22,7 +22,7 @@ runs:
       working-directory: ./deploy
 
     - name: Print step name
-      run: echo "${{environment}}, ${{port}}"
+      run: echo "${{inputs.environment}}, ${{inputs.port}}"
       shell: cmd
       working-directory: ./deploy
 
