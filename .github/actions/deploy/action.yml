@@ -22,6 +22,11 @@ runs:
       working-directory: ./deploy
 
     - name: Print step name
+      run: echo "${{environment}}, ${{port}}"
+      shell: cmd
+      working-directory: ./deploy
+
+    - name: Print step name
       run: echo "Checking folder"
       shell: cmd
       working-directory: ./deploy
